@@ -1,0 +1,98 @@
+/*Grid Layout*/
+.page-wrapper { 
+	display: grid;
+	grid-gap: 20px;
+	}
+
+.intro { 
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+		'header header header'
+		'summary preamble preamble'
+	}
+
+	header {
+		grid-area: header;
+		min-height: 200px;
+		color: $color3;
+		background-color: $color2;
+		text-align: center;
+	}
+
+	.summary {
+		grid-area: summary;
+		border: $color5 solid 1px;
+	}
+
+	.preamble {
+		grid-area: preamble;
+		border: $color5 solid 1px;
+	}
+
+
+.mainsupporting{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+		'explanation participation'
+		'benefits requirements'
+}
+
+	.explanation {
+		grid-area: explanation;
+		border: $color5 solid 1px;
+	}
+
+	.participation {
+		grid-area: participation;
+		border: $color5 solid 1px;
+	}
+
+	.benefits {
+		grid-area: benefits;
+		border: $color5 solid 1px;
+	}
+
+	.requirements {
+		grid-area: requirements;
+		border: $color5 solid 1px;
+	}
+
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	'design-selection design-archives zen-resources'
+}
+
+.design-selection {
+	grid-area: design-selection;
+}
+
+.design-archives {
+	grid-area: design-archives;
+}
+
+.zen-resources {
+	grid-area: zen-resources;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 500px) {
+	.intro { 
+		grid-template-areas:
+			'header'
+			'summary'
+			'preamble'
+		}
+
+	.mainsupporting{
+			grid-template-areas: 
+				'explanation'
+				'participation'
+				'benefits'
+				'requirements'
+		}
+}
