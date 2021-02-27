@@ -96,6 +96,7 @@ html {
   margin: 0;
   padding: 0;
   background-color: #190006;
+  font-size: 16px;
 }
 
 body {
@@ -135,7 +136,9 @@ a:visited {
   color: #D4CDDC;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: underline;
   color: #9685BA;
 }
