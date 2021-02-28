@@ -1,133 +1,73 @@
-/* -------------------------------- 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Limelight&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-xBackground 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
 
--------------------------------- */
 body {
-  /* this is the page background */
-  background-color: #ffffff;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* -------------------------------- 
-
-xPatterns
-
--------------------------------- */
-.cd-box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  background: #ffffff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 6px;
-}
-
-/* -------------------------------- 
-
-xNavigation 
-
--------------------------------- */
-header {
-  background-color: #19191a;
-}
-
-.cd-logo {
-  /* logo box style */
-  background-color: #5f8ee4;
-  width: 120px;
-}
-@media only screen and (min-width: 1024px) {
-  .cd-logo {
-    width: 180px;
-  }
-}
-
-.cd-main-nav {
-  /* main navigation background color - full screen on small devices */
-  background: #19191a;
-}
-.cd-main-nav li a {
-  color: #ffffff;
-  border-color: #262627;
-}
-@media only screen and (min-width: 1024px) {
-  .cd-main-nav li a {
-    color: #7d7d82;
-  }
-  .cd-main-nav li a.selected {
-    color: #ffffff;
-    box-shadow: 0 2px 0 #5f8ee4;
-  }
-  .no-touch .cd-main-nav li a:hover {
-    color: #ffffff;
-  }
-}
-
-.cd-nav-trigger span {
-  /* hamburger menu */
-  background-color: #ffffff;
-}
-.cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  /* upper and lower lines */
-  background-color: #ffffff;
-}
-
-.nav-is-visible .cd-nav-trigger span {
-  /* hide line in the center on mobile when nav is visible */
-  background-color: rgba(255, 255, 255, 0);
-}
-.nav-is-visible .cd-nav-trigger span::before, .nav-is-visible .cd-nav-trigger span::after {
-  /* preserve visibility of upper and lower lines - close icon */
-  background-color: white;
-}
-
-.cd-download {
-  /* download button top-right visible on big devices */
-  background-color: #323234;
-}
-.no-touch .cd-download:hover {
-  background-color: #3f3f41;
-}
-.cd-download span {
-  /* tooltip */
-  background: #5f8ee4;
-  color: #ffffff;
-}
-.cd-download span::before {
-  /* right arrow color */
-  border-color: #5f8ee4;
-}
-
-/* -------------------------------- 
-
-xPage title 
-
--------------------------------- */
-main > h1 {
-  color: #19191a;
-}
-@media only screen and (min-width: 1600px) {
-  main > h1 {
-    /* title goes into the header on big devices */
-    color: #ffffff;
-  }
-}
-
-/* -------------------------------- 
-
 xTypography 
 
 -------------------------------- */
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
-  color: #19191a;
+h1,
+h2 {
+  font-family: "Limelight", cursive;
+  color: #FFF7E2;
 }
 
 h1 {
   font-size: 2.4rem;
   font-weight: 300;
   line-height: 1.2;
-  margin: 0 0 .4em;
+  margin: 0 0 0.4em;
 }
 @media only screen and (min-width: 768px) {
   h1 {
@@ -152,24 +92,169 @@ h2 {
   }
 }
 
+h3 {
+  color: #AAA9AD;
+  font-family: "Limelight", cursive;
+  margin: 0.5em 0;
+  color: #D4AF37;
+}
+
 section > h2::before {
   /* number before each section title */
-  color: silver;
+  color: #9d8022;
 }
 
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #58585b;
+  color: white;
 }
 p a {
-  color: #5f8ee4;
+  color: #AAA9AD;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
   p {
     font-size: 1.6rem;
     line-height: 1.6;
+  }
+}
+
+/*-----------
+xNavigation 
+
+-------------------------------- */
+header {
+  background-color: #FFF7E2;
+}
+
+.cd-logo {
+  /* logo box style */
+  background-color: #AAA9AD;
+  width: 120px;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-logo {
+    width: 180px;
+  }
+}
+
+.cd-main-nav {
+  /* main navigation background color - full screen on small devices */
+  background: #b7b6b9;
+}
+.cd-main-nav li a {
+  color: #190006;
+  border-color: #fffefc;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-main-nav li a {
+    color: white;
+  }
+  .cd-main-nav li a.selected {
+    color: #AAA9AD;
+    box-shadow: 0 2px 0 #AAA9AD;
+  }
+  .cd-main-nav li a:hover {
+    color: #190006;
+  }
+}
+
+.cd-primary-nav, .cd-secondary-nav {
+  /* main navigation background color - full screen on small devices */
+  background: #190006;
+}
+.cd-primary-nav li a, .cd-secondary-nav li a {
+  color: #190006;
+  border-color: #fffefc;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-primary-nav li a, .cd-secondary-nav li a {
+    color: #AAA9AD;
+  }
+  .cd-primary-nav li a.selected, .cd-secondary-nav li a.selected {
+    color: #AAA9AD;
+    box-shadow: 0 2px 0 #AAA9AD;
+  }
+  .cd-primary-nav li a:hover, .cd-secondary-nav li a:hover {
+    color: #190006;
+  }
+}
+
+.cd-nav-trigger span {
+  /* hamburger menu */
+  background-color: #190006;
+}
+.cd-nav-trigger span::before, .cd-nav-trigger span::after {
+  /* upper and lower lines */
+  background-color: #190006;
+}
+
+.nav-is-visible .cd-nav-trigger span {
+  /* hide line in the center on mobile when nav is visible */
+  background-color: rgba(25, 0, 6, 0);
+}
+.nav-is-visible .cd-nav-trigger span::before, .nav-is-visible .cd-nav-trigger span::after {
+  /* preserve visibility of upper and lower lines - close icon */
+  background-color: #190006;
+}
+
+.cd-download {
+  /* download button top-right visible on big devices */
+  background-color: white;
+}
+.no-touch .cd-download:hover {
+  background-color: white;
+}
+.cd-download span {
+  /* tooltip */
+  background: #AAA9AD;
+  color: #190006;
+}
+.cd-download span::before {
+  /* right arrow color */
+  border-color: #AAA9AD;
+}
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+body {
+  /* this is the page background */
+  background-color: #190006;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #D4AF37;
+  border-radius: 3px;
+  background: #190006;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+}
+
+/* -------------------------------- 
+
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+main > h1 {
+  color: #FFF7E2;
+}
+@media only screen and (min-width: 1600px) {
+  main > h1 {
+    /* title goes into the header on big devices */
+    color: #190006;
   }
 }
 
@@ -181,19 +266,19 @@ xButtons
 .btn {
   border: none;
   box-shadow: none;
-  border-radius: .25em;
+  border-radius: 0.25em;
   font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  padding: .6em 2.2em;
+  font-family: "Limelight", cursive;
+  color: #190006;
+  padding: 0.6em 2.2em;
   cursor: pointer;
-  background: #5f8ee4;
+  background: #AAA9AD;
 }
 .btn:focus {
   outline: none;
 }
 .no-touch .btn:hover {
-  background: #759de8;
+  background: #b7b6b9;
 }
 .btn.btn-success {
   background: #6fce72;
@@ -202,19 +287,19 @@ xButtons
   background: #82d485;
 }
 .btn.btn-alert {
-  background: #e4655f;
+  background: #800020;
 }
 .no-touch .btn.btn-alert:hover {
-  background: #e87a75;
+  background: #9a0026;
 }
 .btn.btn-outline {
-  color: #5f8ee4;
+  color: #AAA9AD;
   background: transparent;
-  box-shadow: inset 0 0 0 1px #5f8ee4;
+  box-shadow: inset 0 0 0 1px #AAA9AD;
 }
 .no-touch .btn.btn-outline:hover {
-  color: #ffffff;
-  background: #5f8ee4;
+  color: #190006;
+  background: #AAA9AD;
 }
 @media only screen and (min-width: 768px) {
   .btn {
@@ -224,7 +309,7 @@ xButtons
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
-  color: #5f8ee4;
+  color: #AAA9AD;
 }
 
 /* -------------------------------- 
@@ -243,17 +328,19 @@ xIcons
 xForm 
 
 -------------------------------- */
-input[type=text], select {
-  border: 1px solid #e6e6e6;
-  border-radius: .25em;
-  background: #ffffff;
+input[type=text],
+select {
+  border: 1px solid #D4AF37;
+  border-radius: 0.25em;
+  background: #190006;
 }
-input[type=text]:focus, select:focus {
+input[type=text]:focus,
+select:focus {
   outline: none;
 }
 
 input[type=text] {
-  padding: .6em 1em;
+  padding: 0.6em 1em;
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
 }
 input[type=text].success {
@@ -261,12 +348,12 @@ input[type=text].success {
   box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
 }
 input[type=text].alert {
-  border-color: #e4655f;
-  box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
+  border-color: #800020;
+  box-shadow: 0 0 6px rgba(128, 0, 32, 0.2);
 }
 input[type=text]:focus {
-  border-color: #5f8ee4;
-  box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
+  border-color: #AAA9AD;
+  box-shadow: 0 0 6px rgba(170, 169, 173, 0.2);
 }
 
 input[type=radio],
@@ -291,7 +378,7 @@ input[type=checkbox] {
 .checkbox-label::before,
 .checkbox-label::after {
   /* custom radio and check boxes */
-  content: '';
+  content: "";
   display: block;
   width: 16px;
   height: 16px;
@@ -306,7 +393,7 @@ input[type=checkbox] {
 .radio-label::before,
 .checkbox-label::before {
   left: 0;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #D4AF37;
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
 }
 .radio-label::after,
@@ -326,7 +413,7 @@ input[type=checkbox] {
 
 input[type=radio]:checked + label::before,
 input[type=checkbox]:checked + label::before {
-  background-color: #19191a;
+  background-color: #FFF7E2;
   border: none;
   box-shadow: none;
 }
@@ -338,7 +425,7 @@ input[type=checkbox]:checked + label::after {
 
 .cd-select::after {
   /* switcher arrow for select element */
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   right: 14px;
@@ -357,7 +444,7 @@ input[type=checkbox]:checked + label::after {
 
 select {
   position: relative;
-  padding: .6em 2em .6em 1em;
+  padding: 0.6em 2em 0.6em 1em;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -388,7 +475,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Merriweather", serif;
+  font-family: "Dosis", sans-serif;
 }
 
 a {
@@ -400,7 +487,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Dosis", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -420,10 +507,10 @@ header nav {
   header {
     height: 80px;
   }
-  header:after {
-    content: "";
-    display: table;
+  header::after {
     clear: both;
+    content: "";
+    display: block;
   }
 }
 
@@ -473,7 +560,7 @@ header nav {
   transition: background-color 0.3s 0.3s;
 }
 .cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -486,8 +573,8 @@ header nav {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
-  -webkit-transition: -webkit-transform 0.3s 0.3s;
-  -moz-transition: -moz-transform 0.3s 0.3s;
+  -webkit-transition: transform 0.3s 0.3s;
+  -moz-transition: transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
 }
 .cd-nav-trigger span::before {
@@ -523,8 +610,8 @@ header nav {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 .cd-main-nav li a {
@@ -560,7 +647,7 @@ header nav {
   .cd-main-nav li a {
     display: inline-block;
     font-size: 1.6rem;
-    padding: .4em .2em;
+    padding: 0.4em 0.2em;
     border-bottom: none;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -624,13 +711,13 @@ header nav {
   white-space: nowrap;
   text-align: center;
   font-size: 1.2rem;
-  -webkit-transition: opacity .2s 0s, visibility 0s .2s;
-  -moz-transition: opacity .2s 0s, visibility 0s .2s;
-  transition: opacity .2s 0s, visibility 0s .2s;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
 .cd-download span::before {
   /* right arrow */
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 100%;
@@ -645,9 +732,9 @@ header nav {
 .no-touch .cd-download:hover span {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity .2s 0s, visibility 0s 0s;
-  -moz-transition: opacity .2s 0s, visibility 0s 0s;
-  transition: opacity .2s 0s, visibility 0s 0s;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
+  transition: opacity 0.2s 0s, visibility 0s 0s;
 }
 @media only screen and (min-width: 1024px) {
   .cd-download {
@@ -700,28 +787,40 @@ main > h1 {
 section {
   margin: 3em 0;
 }
-section:after {
-  content: "";
-  display: table;
+section::after {
   clear: both;
+  content: "";
+  display: block;
 }
 section:nth-of-type(1) h2::before {
-  content: '1. ';
+  content: "1. ";
 }
 section:nth-of-type(2) h2::before {
-  content: '2. ';
+  content: "2. ";
 }
 section:nth-of-type(3) h2::before {
-  content: '3. ';
+  content: "3. ";
 }
 section:nth-of-type(4) h2::before {
-  content: '4. ';
+  content: "4. ";
 }
 section:nth-of-type(5) h2::before {
-  content: '5. ';
+  content: "5. ";
 }
 section:nth-of-type(6) h2::before {
-  content: '6. ';
+  content: "6. ";
+}
+section:nth-of-type(7) h2::before {
+  content: "7. ";
+}
+section:nth-of-type(8) h2::before {
+  content: "8. ";
+}
+section:nth-of-type(9) h2::before {
+  content: "9. ";
+}
+section:nth-of-type(10) h2::before {
+  content: "10. ";
 }
 @media only screen and (min-width: 768px) {
   section {
@@ -748,7 +847,7 @@ section:nth-of-type(6) h2::before {
   width: 100%;
 }
 .cd-branding ul:last-of-type {
-  padding-top: .6em;
+  padding-top: 0.6em;
 }
 .cd-branding ul:last-of-type li {
   display: inline-block;
@@ -762,17 +861,17 @@ section:nth-of-type(6) h2::before {
 .cd-branding ul:last-of-type li:nth-of-type(2) img {
   width: 60px;
   height: 60px;
-  border-radius: .6em;
+  border-radius: 0.6em;
 }
 .cd-branding ul:last-of-type li:nth-of-type(3) img {
   width: 32px;
   height: 32px;
-  border-radius: .4em;
+  border-radius: 0.4em;
 }
 .cd-branding ul:last-of-type li:nth-of-type(4) img {
   width: 16px;
   height: 16px;
-  border-radius: .2em;
+  border-radius: 0.2em;
 }
 @media only screen and (min-width: 768px) {
   .cd-branding .cd-box {
@@ -808,7 +907,7 @@ section:nth-of-type(6) h2::before {
 }
 .cd-colors .cd-color-swatch::before, .cd-colors .cd-color-swatch::after {
   /* lighter and darker color shades of the same swatch */
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 50%;
@@ -822,52 +921,53 @@ section:nth-of-type(6) h2::before {
 }
 .cd-colors b {
   display: block;
-  padding: .6em 0;
+  padding: 0.6em 0;
+  color: #67001a;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #5f8ee4;
+  background: #AAA9AD;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-  background: #759de8;
+  background: #b7b6b9;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-  background: #497fe0;
+  background: #9d9ca1;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #19191a;
+  background: #FFF7E2;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-  background: #262627;
+  background: #fffefc;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-  background: #0d0d0d;
+  background: #fff0c9;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch {
-  background: #e4655f;
+  background: #800020;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch::before {
-  background: #e87a75;
+  background: #9a0026;
 }
 .cd-colors li:nth-of-type(3) .cd-color-swatch::after {
-  background: #e05049;
+  background: #67001a;
 }
 .cd-colors li:nth-of-type(4) .cd-color-swatch {
-  background: #e6e6e6;
+  background: #D4AF37;
 }
 .cd-colors li:nth-of-type(4) .cd-color-swatch::before {
-  background: #f3f3f3;
+  background: #d9b74c;
 }
 .cd-colors li:nth-of-type(4) .cd-color-swatch::after {
-  background: #d9d9d9;
+  background: #c7a22b;
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch {
-  background: #ffffff;
+  background: #190006;
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch::before {
-  background: white;
+  background: #33000c;
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
-  background: #f2f2f2;
+  background: black;
 }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
@@ -891,17 +991,17 @@ section:nth-of-type(6) h2::before {
 }
 @media only screen and (min-width: 768px) {
   .cd-typography .cd-box .cd-box,
-  .cd-buttons .cd-box .cd-box,
-  .cd-icons .cd-box .cd-box,
-  .cd-form .cd-box .cd-box {
+.cd-buttons .cd-box .cd-box,
+.cd-icons .cd-box .cd-box,
+.cd-form .cd-box .cd-box {
     padding: 2em;
   }
 }
 
 /* xTypography section - basic style */
 .cd-typography h1::before {
-  content: 'Aa - ';
-  color: #5f8ee4;
+  content: "Aa - ";
+  color: #AAA9AD;
 }
 
 .cd-buttons .cd-box:first-of-type {
@@ -914,7 +1014,7 @@ section:nth-of-type(6) h2::before {
   border-top-right-radius: 0;
 }
 .cd-buttons button {
-  margin: .4em;
+  margin: 0.4em;
 }
 @media only screen and (min-width: 1024px) {
   .cd-buttons button {
@@ -976,3 +1076,5 @@ section:nth-of-type(6) h2::before {
 .no-csstransitions .cd-select::after {
   display: none;
 }
+
+/*# sourceMappingURL=style-guide.css.map */
