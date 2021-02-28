@@ -4,21 +4,32 @@ $page-margin: 0.5em;
 @mixin box {
     border: $color5 solid 1px;
 	padding: 0 1em;
-	margin: 1em 0;
+}
+
+@mixin circle-background {
+	background: $color3;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /*Grid Layout*/
 .page-wrapper {
 	margin: 0 $page-margin;
+	max-width: 1400px;
 }
 
 .intro {
-    // display: grid;
-    // grid-gap: 20px;
-    // grid-template-areas: 
-	// 	'header' 
-	// 	'summary'
-	// 	'preamble';
+    display: grid;
+	grid-gap: 1em;
+    grid-template-areas: 
+		'header' 
+		'summary'
+		'preamble';
 }
 
 header {
@@ -27,7 +38,7 @@ header {
     color: $color3;
     background-color: $color2;
     text-align: center;
-	margin: 0 (-$page-margin) 1em;
+	margin: 0 (-$page-margin);
 }
 
 .summary {
@@ -41,13 +52,14 @@ header {
 }
 
 .main {
-    // display: grid;
-    // grid-gap: 20px;
-    // grid-template-areas: 
-	// 	'explanation'
-	// 	'participation' 
-	// 	'benefits' 
-	// 	'requirements';
+	margin-top: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+		'explanation'
+		'participation' 
+		'benefits' 
+		'requirements';
 }
 
 .explanation {
@@ -71,31 +83,95 @@ header {
 }
 
 .wrapper {
-    // display: grid;
-    // grid-gap: 20px;
-    // grid-template-areas: 'design-selection design-archives zen-resources'
+    display: grid;
+    grid-gap: 1em;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+	'design-selection design-selection .'
+	'. design-archives design-archives'
+	'zen-resources zen-resources .';
+	font-size: $sm-font;
+}
+
+.wrapper h3 {
+	margin: 0;
 }
 
 .design-selection {
     grid-area: design-selection;
+	justify-self: center;
+	width: 300px;
+	height: 300px;
+	@include circle-background();
+
 }
 
 .design-archives {
     grid-area: design-archives;
+	justify-self: center;
+	width: 300px;
+	height: 300px;
+	@include circle-background();
 }
 
 .zen-resources {
     grid-area: zen-resources;
+	justify-self: center;
+	width: 300px;
+	height: 300px;
+	@include circle-background();
 }
 
 
 /*Media Queries*/
 
-// @media screen and (max-width: 500px) {
-//     .intro {
-//         grid-template-areas: 'header' 'summary' 'preamble';
-//     }
-//     .mainsupporting {
-//         grid-template-areas: 'explanation' 'participation' 'benefits' 'requirements'
-//     }
-// }
+@media screen and (min-width: 750px) {
+    .wrapper {
+		font-size: $base-font-size;
+	}
+
+	.design-selection, 
+	.design-archives,
+	.zen-resources {
+		width: 400px;
+		height: 400px;
+	}
+	
+	// .intro {
+    //     grid-template-areas: 'header' 'summary' 'preamble';
+    // }
+    // .mainsupporting {
+    //     grid-template-areas: 'explanation' 'participation' 'benefits' 'requirements'
+    // }
+}
+
+@media screen and (min-width: 1200px) {
+	.intro {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+			'header header'
+			'summary preamble' ;
+	}
+
+	.main {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+			'explanation participation'
+			'benefits requirements';
+	}
+
+	.wrapper {
+		grid-template-areas: 
+			'design-selection design-archives zen-resources'
+	}
+}
+
+@media screen and (min-width: 1420px) {
+	.page-wrapper {
+		margin: auto;
+	}
+
+	header {
+		margin: 0 -2000px;
+	}
+}
