@@ -9,22 +9,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 /*Grid Layout*/
 .page-wrapper {
-  display: grid;
-  grid-gap: 20px;
-}
-
-.intro {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas: "header header header" "summary preamble preamble";
+  margin: 0 0.5em;
 }
 
 header {
   grid-area: header;
-  min-height: 200px;
   color: #800020;
   background-color: #FFF7E2;
   text-align: center;
+  margin: -0.5em;
 }
 
 .summary {
@@ -35,12 +28,6 @@ header {
 .preamble {
   grid-area: preamble;
   border: #D4AF37 solid 1px;
-}
-
-.mainsupporting {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas: "explanation participation" "benefits requirements";
 }
 
 .explanation {
@@ -63,12 +50,6 @@ header {
   border: #D4AF37 solid 1px;
 }
 
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas: "design-selection design-archives zen-resources";
-}
-
 .design-selection {
   grid-area: design-selection;
 }
@@ -82,21 +63,12 @@ header {
 }
 
 /*Media Queries*/
-@media screen and (max-width: 500px) {
-  .intro {
-    grid-template-areas: "header" "summary" "preamble";
-  }
-
-  .mainsupporting {
-    grid-template-areas: "explanation" "participation" "benefits" "requirements";
-  }
-}
 html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #190006;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body {
@@ -104,24 +76,30 @@ body {
   line-height: 1.4;
   color: #FFF7E2;
   background-color: #190006;
-  margin: 30px 50px;
+  margin: 0;
 }
 
 h1 {
   font-family: "Limelight", cursive;
-  font-size: 3em;
+  font-size: 2em;
+  margin: 0;
+  padding: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 5px;
 }
 
 p {
-  margin-top: 0;
   text-align: justify;
 }
 
 h3 {
   font-family: "Limelight", cursive;
   letter-spacing: 1px;
-  margin-bottom: 0;
   color: #FFF7E2;
+  font-size: 1em;
 }
 
 a:link {
