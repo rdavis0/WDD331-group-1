@@ -1,8 +1,10 @@
 
 $page-margin: 0.5em;
 
-@mixin border {
+@mixin box {
     border: $color5 solid 1px;
+	padding: 0 1em;
+	margin: 1em 0;
 }
 
 /*Grid Layout*/
@@ -21,21 +23,21 @@ $page-margin: 0.5em;
 
 header {
     grid-area: header;
-    // min-height: 200px;
+    min-height: 180px;
     color: $color3;
     background-color: $color2;
     text-align: center;
-	margin: 0 -$page-margin;
+	margin: 0 (-$page-margin) 1em;
 }
 
 .summary {
     grid-area: summary;
-    @include border;
+    @include box;
 }
 
 .preamble {
     grid-area: preamble;
-    @include border;
+    @include box;
 }
 
 .main {
@@ -50,22 +52,22 @@ header {
 
 .explanation {
     grid-area: explanation;
-    @include border;
+    @include box;
 }
 
 .participation {
     grid-area: participation;
-    @include border;
+    @include box;
 }
 
 .benefits {
     grid-area: benefits;
-    @include border;
+    @include box;
 }
 
 .requirements {
     grid-area: requirements;
-    @include border;
+    @include box;
 }
 
 .wrapper {

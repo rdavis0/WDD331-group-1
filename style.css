@@ -14,40 +14,53 @@
 
 header {
   grid-area: header;
+  min-height: 180px;
   color: #800020;
   background-color: #FFF7E2;
   text-align: center;
-  margin: -0.5em;
+  margin: 0 -0.5em 1em;
 }
 
 .summary {
   grid-area: summary;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .preamble {
   grid-area: preamble;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .explanation {
   grid-area: explanation;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .participation {
   grid-area: participation;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .benefits {
   grid-area: benefits;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .requirements {
   grid-area: requirements;
   border: #D4AF37 solid 1px;
+  padding: 0 1em;
+  margin: 1em 0;
 }
 
 .design-selection {
