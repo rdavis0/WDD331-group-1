@@ -21,8 +21,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 @import "partials/variables";
-@import "partials/typography.scss";
-@import "partials/layout.scss";
+
 html {
     box-sizing: border-box;
     margin: 0;
@@ -80,7 +79,7 @@ a:focus,
 a:active {
     text-decoration: underline;
     color: #9685BA;
-}
+    }
 
 abbr {
     border-bottom: none;
@@ -90,3 +89,5 @@ ul {
 	list-style-type: none;
 	padding: 0;
 }
+
+@import "partials/layout";
