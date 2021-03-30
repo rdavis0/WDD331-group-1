@@ -26,7 +26,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: $color1;
+    background-color: $color3;
 	font-size: $base-font-size;
 }
 
@@ -34,8 +34,8 @@ body {
     font-family: $primary-font;
     line-height: 1.4;
     color: $color2;
-    background: $color1 url('assests/lowop.jpg');
-    margin: 0;
+    background: url('assests/BG.svg');
+
 }
 
 h1 {
@@ -95,6 +95,7 @@ ul {
     &:active,
     &:focus {
      background-color: $color3;
+     color: $color2;
      }
     }
 

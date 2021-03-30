@@ -22,12 +22,12 @@
 
 	.summary {
 		grid-area: summary;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 	.preamble {
 		grid-area: preamble;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 
@@ -41,22 +41,22 @@
 
 	.explanation {
 		grid-area: explanation;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 	.participation {
 		grid-area: participation;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 	.benefits {
 		grid-area: benefits;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 	.requirements {
 		grid-area: requirements;
-		border: $color5 solid 1px;
+		border: $color5 solid 3px;
 	}
 
 .wrapper {

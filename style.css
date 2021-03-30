@@ -12,7 +12,7 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #190006;
+  background-color: #800020;
   font-size: 20px;
 }
 
@@ -20,8 +20,7 @@ body {
   font-family: "Dosis", sans-serif;
   line-height: 1.4;
   color: #FFF7E2;
-  background: #190006 url("assests/lowop.jpg");
-  margin: 0;
+  background: url("assests/BG.svg");
 }
 
 h1 {
@@ -77,6 +76,7 @@ ul {
 
 .preamble:hover, .preamble:active, .preamble:focus, [role=article]:hover, [role=article]:active, [role=article]:focus {
   background-color: #800020;
+  color: #FFF7E2;
 }
 
 .zen-github, .zen-accessibility, .zen-license, .zen-validate-css, .zen-validate-html {
@@ -203,6 +203,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 5px solid #D4AF37;
 }
 
 .design-archives {
@@ -228,6 +229,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 5px solid #D4AF37;
 }
 
 .zen-resources {
@@ -253,6 +255,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 5px solid #D4AF37;
 }
 
 /*Animation*/
@@ -352,7 +355,7 @@ header {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: summary;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .preamble {
@@ -360,7 +363,7 @@ header {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: preamble;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .mainsupporting {
@@ -374,28 +377,28 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: explanation;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .participation {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: participation;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .benefits {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: benefits;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .requirements {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: requirements;
-  border: #D4AF37 solid 1px;
+  border: #D4AF37 solid 3px;
 }
 
 .wrapper {
