@@ -8,8 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #800020;
@@ -79,28 +78,33 @@ ul {
   color: #FFF7E2;
 }
 
-.zen-github, .zen-accessibility, .zen-license, .zen-validate-css, .zen-validate-html {
-  background-color: #190006;
-  padding: .1em;
+footer {
+  background-color: rgba(25, 0, 6, 0.6);
+  padding: 0.1em;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
 }
 
 /*Grid Layout*/
 .page-wrapper {
   margin: 0 0.5em;
   max-width: 1400px;
+  margin-bottom: 20px;
 }
 
 .intro {
-  display: -ms-grid;
   display: grid;
   grid-gap: 1em;
-      grid-template-areas: 'header'  'summary' 'preamble';
+  grid-template-areas: "header" "summary" "preamble";
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: header;
   min-height: 180px;
   color: #800020;
@@ -110,17 +114,12 @@ header {
 }
 
 .summary {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: summary;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
 }
 
 .preamble {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: preamble;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
@@ -128,51 +127,40 @@ header {
 
 .main {
   margin-top: 1em;
-  display: -ms-grid;
   display: grid;
   grid-gap: 1em;
-      grid-template-areas: 'explanation' 'participation'  'benefits'  'requirements';
+  grid-template-areas: "explanation" "participation" "benefits" "requirements";
 }
 
 .explanation {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: explanation;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
 }
 
 .participation {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: participation;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
 }
 
 .benefits {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: benefits;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
 }
 
 .requirements {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: requirements;
   border: #D4AF37 solid 1px;
   padding: 0 1em;
 }
 
 .wrapper {
-  display: -ms-grid;
   display: grid;
   grid-gap: 1em;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: 'design-selection design-selection .' 'design-archives design-archives' 'zen-resources zen-resources .';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "design-selection design-selection ." ". design-archives design-archives" "zen-resources zen-resources .";
   font-size: 16px;
 }
 
@@ -180,9 +168,15 @@ header {
   margin: 0;
 }
 
+footer {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin-bottom: 1em;
+}
+
 .design-selection {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: design-selection;
   justify-self: center;
   width: 300px;
@@ -191,24 +185,14 @@ header {
   display: inline-block;
   border-radius: 50%;
   text-align: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   border: 5px solid #D4AF37;
 }
 
 .design-archives {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: design-archives;
   justify-self: center;
   width: 300px;
@@ -217,24 +201,14 @@ header {
   display: inline-block;
   border-radius: 50%;
   text-align: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   border: 5px solid #D4AF37;
 }
 
 .zen-resources {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: zen-resources;
   justify-self: center;
   width: 300px;
@@ -243,37 +217,67 @@ header {
   display: inline-block;
   border-radius: 50%;
   text-align: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   border: 5px solid #D4AF37;
 }
 
-/*Animation*/
-.design-selection:hover, .zen-resources:hover, .design-archives:hover {
-  -webkit-animation: hover_color 8s linear infinite;
-          animation: hover_color 8s linear infinite;
-}
+/*Media Queries*/
+@media screen and (min-width: 750px) {
+  .wrapper {
+    font-size: 20px;
+  }
 
-@-webkit-keyframes hover_color {
-  0% {
-    background-color: #800020;
+  .design-selection,
+.design-archives,
+.zen-resources {
+    width: 400px;
+    height: 400px;
   }
-  50% {
-    background: #D2C6EB;
+}
+@media screen and (min-width: 1200px) {
+  .intro {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "summary preamble";
   }
-  95% {
-    background-color: #800020;
+
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "explanation participation" "benefits requirements" ". footer";
   }
+
+  footer {
+    background: none;
+    grid-column-start: footer;
+    justify-self: end;
+    display: block;
+    margin-bottom: 1em;
+  }
+  footer > a {
+    background-color: rgba(25, 0, 6, 0.6);
+    margin-left: 0.2em;
+    padding: 0 0.2em 0 0.2em;
+  }
+
+  .wrapper {
+    grid-template-areas: "design-selection design-archives zen-resources";
+  }
+}
+@media screen and (min-width: 1420px) {
+  .page-wrapper {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  header {
+    margin: 0 -9999px;
+  }
+}
+/*Sidebar Animations*/
+.design-selection:hover, .zen-resources:hover, .design-archives:hover {
+  animation: hover_color 8s linear infinite;
 }
 
 @keyframes hover_color {
@@ -288,151 +292,4 @@ header {
   }
 }
 
-/*Media Queries*/
-@media screen and (min-width: 750px) {
-  .wrapper {
-    font-size: 20px;
-  }
-  .design-selection,
-  .design-archives,
-  .zen-resources {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .intro {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 'header header' 'summary preamble';
-  }
-  .main {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 'explanation participation' 'benefits requirements';
-  }
-  .wrapper {
-        grid-template-areas: 'design-selection design-archives zen-resources';
-  }
-}
-
-@media screen and (min-width: 1420px) {
-  .page-wrapper {
-    margin: auto;
-  }
-  header {
-    margin: 0 -2000px;
-  }
-}
-
-/*Grid Layout*/
-.page-wrapper {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-}
-
-.intro {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-      grid-template-areas: 'header header header' 'summary preamble preamble';
-}
-
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: header;
-  min-height: 200px;
-  color: #800020;
-  background-color: #FFF7E2;
-  text-align: center;
-}
-
-.summary {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: summary;
-  border: #D4AF37 solid 3px;
-}
-
-.preamble {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: preamble;
-  border: #D4AF37 solid 3px;
-}
-
-.mainsupporting {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-      grid-template-areas: 'explanation participation' 'benefits requirements';
-}
-
-.explanation {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: explanation;
-  border: #D4AF37 solid 3px;
-}
-
-.participation {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: participation;
-  border: #D4AF37 solid 3px;
-}
-
-.benefits {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: benefits;
-  border: #D4AF37 solid 3px;
-}
-
-.requirements {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: requirements;
-  border: #D4AF37 solid 3px;
-}
-
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-      grid-template-areas: 'design-selection design-archives zen-resources';
-}
-
-.design-selection {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: design-selection;
-}
-
-.design-archives {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: design-archives;
-}
-
-.zen-resources {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: zen-resources;
-}
-
-/*Media Queries*/
-@media screen and (max-width: 500px) {
-  .intro {
-        grid-template-areas: 'header' 'summary' 'preamble';
-  }
-  .mainsupporting {
-        grid-template-areas: 'explanation' 'participation' 'benefits' 'requirements';
-  }
-}
 /*# sourceMappingURL=style.css.map */

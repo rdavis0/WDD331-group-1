@@ -1,0 +1,19 @@
+/*Sidebar Animations*/
+
+.design-selection:hover, .zen-resources:hover, .design-archives:hover {
+    animation: hover_color 8s linear infinite;
+    }
+    
+    @keyframes hover_color{
+        0% { 
+            background-color: $color3;
+            }
+        
+        50% {
+            background: $color4;
+        }
+        
+        95% {
+            background-color: $color3;
+            }
+    }

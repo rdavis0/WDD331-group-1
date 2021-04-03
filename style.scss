@@ -51,7 +51,6 @@ h2 {
 }
 
 p {
-    // margin-top: 0;
     text-align: justify;
 }
 
@@ -99,10 +98,10 @@ ul {
      }
     }
 
-.zen-github, .zen-accessibility, .zen-license, .zen-validate-css, .zen-validate-html{
-        background-color: $color1;
+footer {
+        background-color: $color1-trans;
         padding: .1em;
     }
 
 @import "partials/layout";
-@import "partials/layout2";
+@import "partials/animation";
